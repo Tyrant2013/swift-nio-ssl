@@ -542,6 +542,6 @@ extension UnsafePointer where Pointee == ASN1_TIME {
         precondition(rc != 0)
 
         // 86400 seconds in a day
-        return time_t(day) * 86400 + time_t(seconds)
+        return time_t(day) * 86400 + Int((seconds))
     }
 }
